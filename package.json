@@ -12,5 +12,31 @@
     "report": "playwright show-report",
     "allure:generate": "allure generate allure-results --clean -o allure-report",
     "allure:open": "allure open allure-report"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.8.0",
+    "allure-commandline": "^2.41.0",
+    "allure-playwright": "^3.8.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AutomationTestingPractice/Playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AutomationTestingPractice/Playwright/issues"
+  },
+  "homepage": "https://github.com/AutomationTestingPractice/Playwright#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.4.2"
   }
 }
