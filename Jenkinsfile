@@ -2,6 +2,10 @@ pipeline {
 
     agent any
 
+    tools {
+        nodejs 'NodeJS'
+    }
+
     environment {
         CI = 'true'
     }
@@ -62,9 +66,20 @@ pipeline {
 
         always {
 
-            archiveArtifacts artifacts: 'playwright-report/**'
+            archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
 
-            archiveArtifacts artifacts: 'allure-report/**'
+            archiveArtifacts artifacts: 'allure-report/**', allowEmptyArchive: true
+
+            publishHTML([
+                allowMissing: true,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'playwright-report',
+                reportFiles: 'index.html',
+                reportName: 'Playwright HTML Report'
+            ])
+
+            cleanWs()
         }
 
         success {
