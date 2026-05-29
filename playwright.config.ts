@@ -14,6 +14,10 @@ export default defineConfig({
   retries: 2,
 
   workers: process.env.CI ? 4 : 2,
+  expect:{
+    timeout: 40*1000,
+
+  },
 
   reporter: [
     ['html'],
@@ -21,15 +25,27 @@ export default defineConfig({
   ],
 
   use: {
+
     baseURL: process.env.BASE_URL,
-
+  
+    headless: process.env.CI ? true : false,
+  
+    viewport: {
+      width: 1920,
+      height: 1080
+    },
+  
+    ignoreHTTPSErrors: true,
+  
+    actionTimeout: 15000,
+  
+    navigationTimeout: 30000,
+  
     screenshot: 'only-on-failure',
-
+  
     video: 'retain-on-failure',
-
-    trace: 'retain-on-failure',
-
-    headless: true
+  
+    trace: 'retain-on-failure'
   },
 
   projects: [
