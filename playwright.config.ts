@@ -30,10 +30,7 @@ export default defineConfig({
   
     headless: process.env.CI ? true : false,
   
-    viewport: {
-      width: 1920,
-      height: 1080
-    },
+    viewport: null,
   
     ignoreHTTPSErrors: true,
   

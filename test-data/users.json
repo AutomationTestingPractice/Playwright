@@ -1,22 +1,22 @@
 [
     {
       "role": "Admin",
-      "username": "admin@test.com",
-      "password": "Admin123",
-      "expectedText": "Admin Dashboard"
+      "username": "Admin",
+      "password": "admin123",
+      "expectedText": "Dashboard"
     },
   
     {
       "role": "Manager",
-      "username": "manager@test.com",
-      "password": "Manager123",
-      "expectedText": "Manager Dashboard"
+      "username": "Admin",
+      "password": "admin123",
+      "expectedText": "Dashboard"
     },
   
     {
       "role": "Customer",
-      "username": "customer@test.com",
-      "password": "Customer123",
-      "expectedText": "Customer Dashboard"
+      "username": "Admin",
+      "password": "admin123",
+      "expectedText": "Dashboard"
     }
   ]

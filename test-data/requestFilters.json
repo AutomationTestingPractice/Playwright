@@ -1,0 +1,17 @@
+[
+    {
+      "searchText": "REQ001",
+      "status": "Pending",
+      "requestType": "Booking"
+    },
+    {
+      "searchText": "REQ002",
+      "status": "Approved",
+      "requestType": "Event"
+    },
+    {
+      "searchText": "REQ003",
+      "status": "Rejected",
+      "requestType": "Venue"
+    }
+  ]
